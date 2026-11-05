@@ -227,24 +227,35 @@ button { font-family: inherit; }
 #menunavegacao .dropdown-item:hover, #menunavegacao .dropdown-item:focus { background: var(--verde-50); color: var(--verde-700); }
 #menunavegacao .dropdown-item i, #menunavegacao .dropdown-item iconify-icon { color: var(--verde-600); font-size: 18px; }
 
-/* Desktop: submenu com "intenção de hover" (CSS puro)
-   - abre após 90ms (passar o mouse de relance pelo vizinho não troca o submenu)
-   - fecha após 350ms (dá tempo de descer na diagonal até o submenu)
+/* Desktop: submenu (CSS puro) — SEMPRE um único submenu aberto
+   - abre imediatamente ao passar o mouse / foco de teclado
+   - ao sair do menu fecha após 200ms (tolerância para descer na diagonal até o submenu)
+   - ao entrar em OUTRO item, os demais fecham NA HORA (sem atraso) => sem sobreposição
    - ponte invisível (::before) cobre qualquer vão entre link e submenu
-   - itens da direita abrem alinhados à direita (não vazam da tela) */
+   - só os 2 últimos itens abrem alinhados à direita (não vazam da tela) */
 @media (min-width: 993px) {
   #menunavegacao .dropdown-menu {
     display: block; visibility: hidden; opacity: 0; transform: translateY(6px);
-    transition: opacity .16s var(--ease) .35s, transform .16s var(--ease) .35s, visibility 0s linear .51s;
+    transition: opacity .14s var(--ease) .2s, transform .14s var(--ease) .2s, visibility 0s linear .34s;
   }
   #menunavegacao .nav-item:hover > .dropdown-menu,
   #menunavegacao .nav-item:focus-within > .dropdown-menu {
     visibility: visible; opacity: 1; transform: none;
-    transition: opacity .16s var(--ease) .09s, transform .16s var(--ease) .09s, visibility 0s linear .09s;
+    transition: opacity .14s var(--ease), transform .14s var(--ease), visibility 0s;
+  }
+  /* Clique com o mouse deixa o foco no link: não manter o submenu "preso" depois que o mouse sai.
+     (foco de teclado = :focus-visible continua abrindo normalmente) */
+  #menunavegacao .nav-item:focus-within:not(:hover):not(:has(:focus-visible)) > .dropdown-menu {
+    visibility: hidden; opacity: 0; transform: translateY(6px);
+    transition: opacity .14s var(--ease) .2s, transform .14s var(--ease) .2s, visibility 0s linear .34s;
+  }
+  /* Enquanto um item está sob o mouse, qualquer outro submenu some imediatamente */
+  #menunavegacao .navbar-nav:has(> .nav-item:hover) > .nav-item:not(:hover) > .dropdown-menu {
+    visibility: hidden; opacity: 0; transform: translateY(6px); transition: none;
   }
   #menunavegacao .nav-item:hover { z-index: 3; }
   #menunavegacao .dropdown-menu::before { content: ""; position: absolute; left: -12px; right: -12px; top: -14px; height: 14px; }
-  #menunavegacao .nav-item:nth-last-child(-n+3) > .dropdown-menu { left: auto; right: 0; }
+  #menunavegacao .nav-item:nth-last-child(-n+2) > .dropdown-menu { left: auto; right: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   #menunavegacao .dropdown-menu, #menunavegacao .nav-item:hover > .dropdown-menu { transition-duration: 0s; transform: none; }
