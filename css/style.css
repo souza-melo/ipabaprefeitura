@@ -647,3 +647,26 @@ button { font-family: inherit; }
   .hero-caption .wrap { padding-bottom: 54px; }
   .news-destaque .materia-box-static-title h3 { font-size: 1.3rem; }
 }
+
+/* ---------- Banners (3 × 360×440) ---------- */
+.banners-trio { padding: 8px 0 56px; background: var(--superficie); }
+.banners-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 35px; }
+.banner-card { position: relative; display: block; width: 100%; max-width: 100%; height: 440px; border-radius: var(--r-lg); overflow: hidden; color: #fff; text-decoration: none; box-shadow: 0 8px 24px rgba(16,33,26,.12); transition: transform .25s ease, box-shadow .25s ease; }
+.banner-card:hover, .banner-card:focus-visible { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(16,33,26,.2); }
+.banner-card:focus-visible { outline: 3px solid var(--ambar-500); outline-offset: 3px; }
+.banner-card.b1 { background: linear-gradient(160deg, var(--azul-600), #0b2e45); }
+.banner-card.b2 { background: linear-gradient(160deg, var(--verde-600), #06330f); }
+.banner-card.b3 { background: linear-gradient(160deg, var(--ambar-500), #6b4a00); }
+.banner-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.banner-ph { position: absolute; inset: 0; display: grid; place-items: center; font-size: 44px; color: rgba(255,255,255,.35); }
+.banner-caption { position: absolute; inset: auto 0 0 0; padding: 72px 24px 24px; display: flex; flex-direction: column; gap: 6px; background: linear-gradient(to top, rgba(0,0,0,.62), transparent); }
+.banner-kicker { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .9; }
+.banner-caption strong { font-family: var(--fonte-titulo); font-size: 20px; line-height: 1.25; }
+/* alinhado às bordas do bloco de notícias (largura fluida, altura fixa 440) */
+@media (max-width: 992px) {
+  .banners-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); justify-content: stretch; gap: 20px; }
+  .banner-card { height: auto; aspect-ratio: 360 / 440; }
+}
+@media (max-width: 560px) {
+  .banners-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- Skip links -->
+        <div class="skip-links">
+            <a href="#main">Ir para o conteúdo</a>
+            <a href="#menunavegacao">Ir para o menu</a>
+            <a href="#busca-avancada-box-input">Ir para a busca</a>
+            <a href="#footer">Ir para o rodapé</a>
+        </div>
+
+        <!-- ============ BARRA DE ACESSIBILIDADE ============ -->
+        <div class="topbar" role="navigation" aria-label="Barra de acessibilidade">
+            <div class="wrap">
+                <div class="topbar-left topbar-sections">
+                    <a accesskey="1" href="#main">Ir ao conteúdo <span class="key">1</span></a>
+                    <a accesskey="2" href="#menunavegacao">Ir ao menu <span class="key">2</span></a>
+                    <a accesskey="3" href="#busca-avancada-box-input">Ir à busca <span class="key">3</span></a>
+                    <a accesskey="4" href="#footer">Ir ao rodapé <span class="key">4</span></a>
+                </div>
+                <div class="topbar-right">
+                    <a class="topbar-cta" href="#servicos"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> Acessar Serviços</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ HEADER ============ -->
+        <header class="header" id="header">
+            <div class="wrap">
+                <a class="h-logo" href="/" aria-label="Prefeitura Municipal de Ipaba — Página inicial">
+                    <img src="{BASE_PATH}/images/logotipo.webp" alt="Brasão da Prefeitura Municipal de Ipaba" width="50" height="50" />
+                    <span class="h-logo-text">
+                        <span class="h-logo-title">Prefeitura de Ipaba</span>
+                    </span>
+                </a>
+                <!-- BOX: busca avançada -->
+                <BuscaAvancadaBox class="busca-avancada-box" label="Buscar no portal" placeholder="Buscar serviços, notícias, documentos…"></BuscaAvancadaBox>
+                <!-- BOX: menu de navegação ao lado da busca (itens configurados no admin do PortalFacil) -->
+                <MenuPortal local="main" class="nav-primary-portal"></MenuPortal>
+            </div>
+        </header>
+
+        <!-- ============ HERO / BANNERS ============ -->
+        <section class="hero" id="inicio" aria-label="Banners principais">
+            <h1 class="visually-hidden">Prefeitura Municipal de Ipaba — Portal Oficial</h1>
+            <!-- BOX: banner em slider -->
+            <BannerBox display-mode="slider" origin-data="latest" members="I" size="5"></BannerBox>
+        </section>
+
+        <!-- ============ ACESSO RÁPIDO ============ -->
+        <section class="quick" aria-label="Acesso rápido">
+            <div class="wrap">
+                <div class="quick-grid">
+                    <a class="quick-card" href="#servicos">
+                        <span class="quick-ico"><i class="bi bi-person-fill" aria-hidden="true"></i></span>
+                        <h3>Cidadão</h3>
+                        <p>Serviços e atendimentos para o cidadão de Ipaba.</p>
+                        <span class="go">Acessar <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a class="quick-card c-azul" href="#servicos">
+                        <span class="quick-ico"><i class="bi bi-building-fill" aria-hidden="true"></i></span>
+                        <h3>Empresa</h3>
+                        <p>Abertura, alvarás e serviços para empresas.</p>
+                        <span class="go">Acessar <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a class="quick-card c-coral" href="#servicos">
+                        <span class="quick-ico"><i class="bi bi-signpost-split-fill" aria-hidden="true"></i></span>
+                        <h3>Turismo</h3>
+                        <p>Pontos turísticos, cultura e lazer no município.</p>
+                        <span class="go">Acessar <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                    <a class="quick-card c-azul" href="#">
+                        <span class="quick-ico"><i class="bi bi-person-badge-fill" aria-hidden="true"></i></span>
+                        <h3>Espaço do Servidor</h3>
+                        <p>Área de acesso exclusivo dos servidores.</p>
+                        <span class="go">Acessar <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ MAIN ============ -->
+        <main id="main">
+
+            <!-- Serviços & Secretarias -->
+            <section class="section alt" id="noticias">
+                <div class="wrap">
+                    <div class="sec-head">
+                        <span class="kicker">Comunicação</span>
+                        <h2 class="sec-title">Últimas <em>notícias</em></h2>
+                        <p class="sec-sub">Fique por dentro do que acontece em Ipaba.</p>
+                    </div>
+                    <div class="news-grid">
+                        <div class="news-destaque">
+                            <!-- BOX: notícia em destaque (slider) -->
+                            <MateriaBox display-mode="slider" origin-data="latest" members="I,T,H,D" id="materias-destaque" size="5" length-title="90" length-headline="140" date-format="dd/MM/yyyy"></MateriaBox>
+                        </div>
+                        <div class="news-lista">
+                            <!-- BOX: notícias recentes (lista) -->
+                            <MateriaBox display-mode="list-static" origin-data="latest" members="I,T,D" id="materias-lista" size="2" length-title="80" date-format="dd/MM/yyyy" use-btn-view-more="true"></MateriaBox>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Banners (3 × 360×440 px) -->
+            <section class="banners-trio" id="banners" aria-label="Banners institucionais">
+                <div class="wrap">
+                    <div class="banners-grid">
+                        <a class="banner-card b1" href="#" aria-label="Título do banner 1">
+                            <span class="banner-ph" aria-hidden="true"><i class="bi bi-image"></i></span>
+                            <span class="banner-caption"><span class="banner-kicker">Em destaque</span><strong>Título do banner 1</strong></span>
+                        </a>
+                        <a class="banner-card b2" href="#" aria-label="Título do banner 2">
+                            <span class="banner-ph" aria-hidden="true"><i class="bi bi-image"></i></span>
+                            <span class="banner-caption"><span class="banner-kicker">Em destaque</span><strong>Título do banner 2</strong></span>
+                        </a>
+                        <a class="banner-card b3" href="#" aria-label="Título do banner 3">
+                            <span class="banner-ph" aria-hidden="true"><i class="bi bi-image"></i></span>
+                            <span class="banner-caption"><span class="banner-kicker">Em destaque</span><strong>Título do banner 3</strong></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ipaba em números -->
+            <section class="stats-band" aria-label="Ipaba em números">
+                <div class="wrap">
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <div class="num">12</div>
+                            <div class="lbl">Serviços online</div>
+                            <div class="sub">Tributos, saúde, educação, ouvidoria e muito mais num só portal.</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">24<span>h</span></div>
+                            <div class="lbl">Disponibilidade</div>
+                            <div class="sub">Serviços digitais acessíveis a qualquer hora, de qualquer lugar.</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num"><span>+</span>19</div>
+                            <div class="lbl">Mil habitantes</div>
+                            <div class="sub">Uma cidade que cresce com qualidade de vida e gestão moderna.</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">100<span>%</span></div>
+                            <div class="lbl">Transparência</div>
+                            <div class="sub">Acesso livre a receitas, despesas, contratos e licitações.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notícias -->
+            <section class="section" id="servicos">
+                <div class="wrap">
+                    <div class="sec-head">
+                        <span class="kicker">Serviços &amp; Secretarias</span>
+                        <h2 class="sec-title">Tudo o que a <em>cidade precisa</em>, num só lugar</h2>
+                        <p class="sec-sub">Acesse as secretarias municipais, a transparência e os serviços online da Prefeitura de Ipaba.</p>
+                    </div>
+
+                    <!-- Abas de categoria (filtro 100% CSS, sem JS) -->
+                    <div class="svc-tabs">
+                        <input type="radio" name="svc-filter" id="svcf-todos" class="svc-radio" checked>
+                        <input type="radio" name="svc-filter" id="svcf-educacao" class="svc-radio">
+                        <input type="radio" name="svc-filter" id="svcf-saude" class="svc-radio">
+                        <input type="radio" name="svc-filter" id="svcf-fazenda" class="svc-radio">
+                        <input type="radio" name="svc-filter" id="svcf-admin" class="svc-radio">
+                        <input type="radio" name="svc-filter" id="svcf-transp" class="svc-radio">
+                        <input type="radio" name="svc-filter" id="svcf-licitacoes" class="svc-radio">
+                        <input type="radio" name="svc-filter" id="svcf-atendimento" class="svc-radio">
+
+                        <div class="svc-filters" role="group" aria-label="Filtrar serviços por categoria">
+                            <label class="svc-tab" for="svcf-todos"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> Todos</label>
+                            <label class="svc-tab" for="svcf-educacao">Educação</label>
+                            <label class="svc-tab" for="svcf-saude">Saúde</label>
+                            <label class="svc-tab" for="svcf-fazenda">Fazenda</label>
+                            <label class="svc-tab" for="svcf-admin">Administração</label>
+                            <label class="svc-tab" for="svcf-transp">Transparência</label>
+                            <label class="svc-tab" for="svcf-licitacoes">Licitações</label>
+                            <label class="svc-tab" for="svcf-atendimento">Atendimento</label>
+                        </div>
+
+                        <div class="svc-grid" role="list">
+                            <a class="svc-card c-verde cat-educacao" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></span><span class="svc-name">Sec. de Educação</span><span class="svc-desc">Escolas, CMEIs e matrículas</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-teal cat-saude" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span><span class="svc-name">Sec. de Saúde</span><span class="svc-desc">Unidades, campanhas e serviços</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-verde cat-saude" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span><span class="svc-name">Vigilância Sanitária</span><span class="svc-desc">Fiscalização e licenças</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-ambar cat-fazenda" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-cash-coin" aria-hidden="true"></i></span><span class="svc-name">Sec. de Fazenda</span><span class="svc-desc">Tributos, IPTU e certidões</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-azul cat-admin" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i></span><span class="svc-name">Estrutura Adm.</span><span class="svc-desc">Organograma e telefones úteis</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-rosa cat-admin" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-people-fill" aria-hidden="true"></i></span><span class="svc-name">Bolsa Social</span><span class="svc-desc">Programas sociais do município</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-roxo cat-admin" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-clipboard-check-fill" aria-hidden="true"></i></span><span class="svc-name">Processo Seletivo</span><span class="svc-desc">Editais e inscrições</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-azul cat-admin" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-file-earmark-text-fill" aria-hidden="true"></i></span><span class="svc-name">Concurso Público</span><span class="svc-desc">Edital 01/2026</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-roxo cat-admin" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-journals" aria-hidden="true"></i></span><span class="svc-name">Legislação</span><span class="svc-desc">Leis, decretos e portarias</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-verde cat-transp" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-eye-fill" aria-hidden="true"></i></span><span class="svc-name">Transparência</span><span class="svc-desc">Receitas, despesas e contratos</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-ambar cat-transp" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i></span><span class="svc-name">Contas Públicas</span><span class="svc-desc">Balancetes e prestação de contas</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-teal cat-transp" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-graph-up" aria-hidden="true"></i></span><span class="svc-name">Respons. Fiscal</span><span class="svc-desc">Relatórios da LRF (RGF/RREO)</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-azul cat-transp" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-newspaper" aria-hidden="true"></i></span><span class="svc-name">Diário Oficial</span><span class="svc-desc">Publicações do município</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-laranja cat-licitacoes" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-hammer" aria-hidden="true"></i></span><span class="svc-name">Licitações</span><span class="svc-desc">Editais, atas e resultados</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-verde cat-atendimento" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-ui-checks" aria-hidden="true"></i></span><span class="svc-name">Protocolo Online</span><span class="svc-desc">Abra e acompanhe protocolos</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-azul cat-atendimento" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-patch-question-fill" aria-hidden="true"></i></span><span class="svc-name">Perguntas Frequentes</span><span class="svc-desc">Dúvidas mais comuns</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-teal cat-atendimento" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-diagram-2" aria-hidden="true"></i></span><span class="svc-name">Mapa do Site</span><span class="svc-desc">Todas as páginas do portal</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-rosa cat-atendimento" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i></span><span class="svc-name">Ouvidoria</span><span class="svc-desc">Registre manifestações</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                            <a class="svc-card c-ambar cat-atendimento" href="#" role="listitem"><span class="svc-icon"><i class="bi bi-info-circle-fill" aria-hidden="true"></i></span><span class="svc-name">e-SIC / LAI</span><span class="svc-desc">Lei de Acesso à Informação</span><span class="svc-arrow"><i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- e-SIC + Transparência -->
+            <section class="section" id="transparencia">
+                <div class="wrap">
+                    <div class="band-esic">
+                        <span class="big">e-SIC</span>
+                        <div class="txt">
+                            <strong>Sistema Eletrônico do Serviço de Informação ao Cidadão</strong>
+                            Solicite informações públicas de forma simples, rápida e transparente.
+                        </div>
+                        <a class="btn" href="#"><i class="bi bi-send-fill" aria-hidden="true"></i> Fazer um pedido</a>
+                    </div>
+
+                    <div class="sec-head" style="margin-top:48px">
+                        <span class="kicker">Gestão aberta</span>
+                        <h2 class="sec-title">Transparência <em>pública</em></h2>
+                    </div>
+                    <div class="transp-grid">
+                        <a class="transp-item" href="#"><span class="transp-ico"><i class="bi bi-eye-fill"></i></span><h3>Portal da Transparência</h3><p>Receitas, despesas e contratos (até 06/2025).</p></a>
+                        <a class="transp-item" href="#"><span class="transp-ico"><i class="bi bi-calendar-check-fill"></i></span><h3>Transparência 2025+</h3><p>Dados a partir de junho de 2025.</p></a>
+                        <a class="transp-item" href="#"><span class="transp-ico"><i class="bi bi-hammer"></i></span><h3>Licitações</h3><p>Editais, atas e resultados.</p></a>
+                        <a class="transp-item" href="#"><span class="transp-ico"><i class="bi bi-broadcast"></i></span><h3>Radar da Transparência</h3><p>Índice e fiscalização com o TCE-MG.</p></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="footer" id="footer">
+            <div class="wrap">
+                <div class="footer-grid">
+                    <div class="ft-brand">
+                        <div class="ft-logo">
+                            <img src="{BASE_PATH}/images/logotipo.webp" alt="Prefeitura Municipal de Ipaba" width="200" height="56" />
+                        </div>
+                        <p class="ft-about">Prefeitura Municipal de Ipaba — trabalhando por uma cidade mais moderna, transparente e próxima do cidadão.</p>
+                        <div class="ft-social" aria-label="Redes sociais">
+                            <a href="https://www.instagram.com/prefeitura.ipaba/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Prefeitura de Ipaba (abre em nova aba)" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/prefeituradeipaba/" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Prefeitura de Ipaba (abre em nova aba)" title="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="ft-col">
+                        <h3>Serviços</h3>
+                        <ul>
+                            <li><a href="#"><i class="bi bi-person-fill"></i> Cidadão</a></li>
+                            <li><a href="#"><i class="bi bi-building-fill"></i> Empresa</a></li>
+                            <li><a href="#"><i class="bi bi-signpost-split-fill"></i> Turismo</a></li>
+                            <li><a href="#"><i class="bi bi-ui-checks"></i> Protocolo Online</a></li>
+                            <li><a href="#"><i class="bi bi-person-badge-fill"></i> Espaço do Servidor</a></li>
+                        </ul>
+                    </div>
+                    <div class="ft-col">
+                        <h3>Transparência</h3>
+                        <ul>
+                            <li><a href="#"><i class="bi bi-eye-fill"></i> Portal da Transparência</a></li>
+                            <li><a href="#"><i class="bi bi-hammer"></i> Licitações</a></li>
+                            <li><a href="#"><i class="bi bi-bar-chart-fill"></i> Contas Públicas</a></li>
+                            <li><a href="#"><i class="bi bi-diagram-2"></i> Mapa do Site</a></li>
+                            <li><a href="#"><i class="bi bi-broadcast"></i> Radar da Transparência</a></li>
+                            <li><a href="#"><i class="bi bi-search"></i> Fiscalizando com o TCE</a></li>
+                        </ul>
+                    </div>
+                    <div class="ft-col ft-contact">
+                        <h3>Contato</h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> Av. Manoel Machado Franco, 176 — Centro<br>Ipaba — MG, CEP 35198-000</p>
+                        <p><i class="bi bi-envelope-fill"></i> gabinete@ipaba.mg.gov.br</p>
+                        <p><i class="bi bi-clock-fill"></i> Seg a Sex: 08h às 17h</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 Prefeitura Municipal de Ipaba — Todos os direitos reservados</p>
+                    <nav aria-label="Links legais">
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">LGPD</a>
+                        <a href="#">Mapa do Site</a>
+                        <a href="#">Acessibilidade</a>
+                    </nav>
+                </div>
+                <div class="footer-portalfacil-logo">
+                    <a href="https://portalfacil.com.br" aria-label="Portal Fácil" target="_blank" rel="noopener"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NjMgMTQzIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBvcnRhbCBGw6FjaWwiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xOTQ2LjQ5MzU5NCAtMTI2OS4wNjc3NzgpIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDIuODk3Mjc2KSI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4yMDA2NjQgMCAwIDAuMjAwNjY0IDE0NDEuMDI3OTQ4IDEwMjMuMzMzMzQ1KSI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMS42MjExMDkgMCAwIDEgLTQzMy4yMTQ4MzEgLTE1Ni4zODQzNTEpIj48cmVjdCB4PSIxODIxLjA4NiIgeT0iMTgzOS40ODYiIHdpZHRoPSIyMzUuNzY3IiBoZWlnaHQ9IjIzNS43NjciIGZpbGw9IiMyMzkxZWIiLz48L2c+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMDEzMDEgMCAwIDEgMTA3Ny43MTQzODkgLTM5My41NTA1NzUpIj48cGF0aCBkPSJNMTgyMS4wODYsMjA3NS4yNTNMMTgyMS4wODYsMTYwMy43MTlMMTgyMS4zOTMsMTYwMy43MTlDMTg4My44NDEsMTYwMy43MTkgMTk0My43MzIsMTYyOC41NTggMTk4Ny44ODksMTY3Mi43NzNDMjAzMi4wNDYsMTcxNi45ODggMjA1Ni44NTQsMTc3Ni45NTcgMjA1Ni44NTQsMTgzOS40ODZMMjA1Ni44NTQsMjA3NS4yNTNMMTgyMS4wODYsMjA3NS4yNTNaIiBmaWxsPSIjMjM5MWViIi8+PC9nPjxnIHRyYW5zZm9ybT0ibWF0cml4KDEuNjIxMTA5IDAgMCAxIC00MzMuMjE0ODMxIC02MjkuMzE3OTYpIj48cmVjdCB4PSIxODIxLjA4NiIgeT0iMTgzOS40ODYiIHdpZHRoPSIyMzUuNzY3IiBoZWlnaHQ9IjIzNS43NjciIGZpbGw9IiMxYzc1YmMiLz48L2c+PC9nPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNjEwMDcxIDAgMCAwLjYxMDA3MSAxNTIyLjMyNDgzNiA2OTIuMzU5MTkyKSI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMjAwIDAgMCAyMDAgOTU1LjQ3NDE5NSAxMTI4LjQxMzMyMSkiPjxwYXRoIGQ9Ik0wLjA3LC0wTDAuMDcsLTAuNzJMMC4zNjcsLTAuNzJDMC4zNzQsLTAuNzIgMC4zODQsLTAuNzIgMC4zOTUsLTAuNzE5QzAuNDA2LC0wLjcxOSAwLjQxNiwtMC43MTggMC40MjUsLTAuNzE2QzAuNDY3LC0wLjcxIDAuNTAxLC0wLjY5NiAwLjUyOCwtMC42NzRDMC41NTYsLTAuNjUzIDAuNTc2LC0wLjYyNiAwLjU4OSwtMC41OTRDMC42MDIsLTAuNTYxIDAuNjA5LC0wLjUyNSAwLjYwOSwtMC40ODZDMC42MDksLTAuNDQ2IDAuNjAyLC0wLjQxIDAuNTg5LC0wLjM3OEMwLjU3NSwtMC4zNDUgMC41NTUsLTAuMzE4IDAuNTI4LC0wLjI5N0MwLjUwMSwtMC4yNzYgMC40NjYsLTAuMjYyIDAuNDI1LC0wLjI1NUMwLjQxNiwtMC4yNTQgMC40MDYsLTAuMjUzIDAuMzk0LC0wLjI1MkMwLjM4MywtMC4yNTIgMC4zNzQsLTAuMjUxIDAuMzY3LC0wLjI1MUwwLjE5LC0wLjI1MUwwLjE5LC0wTDAuMDcsLTBaTTAuMTksLTAuMzY0TDAuMzYyLC0wLjM2NEMwLjM2OSwtMC4zNjQgMC4zNzcsLTAuMzY0IDAuMzg1LC0wLjM2NUMwLjM5MywtMC4zNjYgMC40MDEsLTAuMzY3IDAuNDA4LC0wLjM2OUMwLjQyOCwtMC4zNzQgMC40NDQsLTAuMzgzIDAuNDU1LC0wLjM5NkMwLjQ2NywtMC40MDggMC40NzUsLTAuNDIzIDAuNDgsLTAuNDM5QzAuNDg0LC0wLjQ1NSAwLjQ4NywtMC40NyAwLjQ4NywtMC40ODZDMC40ODcsLTAuNTAxIDAuNDg0LC0wLjUxNyAwLjQ4LC0wLjUzM0MwLjQ3NSwtMC41NDkgMC40NjcsLTAuNTYzIDAuNDU1LC0wLjU3NkMwLjQ0NCwtMC41ODggMC40MjgsLTAuNTk3IDAuNDA4LC0wLjYwMkMwLjQwMSwtMC42MDQgMC4zOTMsLTAuNjA2IDAuMzg1LC0wLjYwNkMwLjM3NywtMC42MDcgMC4zNjksLTAuNjA3IDAuMzYyLC0wLjYwN0wwLjE5LC0wLjYwN0wwLjE5LC0wLjM2NFoiIGZpbGw9IiMxYzc1YmMiLz48L2c+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMjAwIDAgMCAyMDAgMTA4MS40NzQxOTUgMTEyOC40MTMzMjEpIj48cGF0aCBkPSJNMC4zMDksMC4wMTVDMC4yNTQsMC4wMTUgMC4yMDcsMC4wMDMgMC4xNjcsLTAuMDIyQzAuMTI3LC0wLjA0NiAwLjA5NSwtMC4wNzkgMC4wNzMsLTAuMTIyQzAuMDUxLC0wLjE2NSAwLjA0LC0wLjIxNCAwLjA0LC0wLjI3QzAuMDQsLTAuMzI3IDAuMDUxLC0wLjM3NiAwLjA3NCwtMC40MTlDMC4wOTcsLTAuNDYyIDAuMTI4LC0wLjQ5NSAwLjE2OCwtMC41MTlDMC4yMDksLTAuNTQzIDAuMjU1LC0wLjU1NSAwLjMwOSwtMC41NTVDMC4zNjMsLTAuNTU1IDAuNDEsLTAuNTQzIDAuNDUxLC0wLjUxOUMwLjQ5MSwtMC40OTQgMC41MjIsLTAuNDYxIDAuNTQ1LC0wLjQxOEMwLjU2NywtMC4zNzUgMC41NzgsLTAuMzI2IDAuNTc4LC0wLjI3QzAuNTc4LC0wLjIxNCAwLjU2NywtMC4xNjQgMC41NDQsLTAuMTIyQzAuNTIyLC0wLjA3OSAwLjQ5MSwtMC4wNDUgMC40NSwtMC4wMjFDMC40MSwwLjAwMyAwLjM2MiwwLjAxNSAwLjMwOSwwLjAxNVpNMC4zMDksLTAuMDk4QzAuMzU2LC0wLjA5OCAwLjM5MiwtMC4xMTQgMC40MTUsLTAuMTQ2QzAuNDM5LC0wLjE3OCAwLjQ1MSwtMC4yMTkgMC40NTEsLTAuMjdDMC40NTEsLTAuMzIyIDAuNDM5LC0wLjM2NCAwLjQxNSwtMC4zOTVDMC4zOTEsLTAuNDI3IDAuMzU2LC0wLjQ0MiAwLjMwOSwtMC40NDJDMC4yNzYsLTAuNDQyIDAuMjUsLTAuNDM1IDAuMjI5LC0wLjQyQzAuMjA4LC0wLjQwNiAwLjE5MywtMC4zODYgMC4xODMsLTAuMzZDMC4xNzMsLTAuMzM0IDAuMTY4LC0wLjMwNCAwLjE2OCwtMC4yN0MwLjE2OCwtMC4yMTggMC4xNzksLTAuMTc2IDAuMjAzLC0wLjE0NUMwLjIyNywtMC4xMTMgMC4yNjIsLTAuMDk4IDAuMzA5LC0wLjA5OFoiIGZpbGw9IiMxYzc1YmMiLz48L2c+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMjAwIDAgMCAyMDAgMTIwNS4wNzQxOTUgMTEyOC40MTMzMjEpIj48cGF0aCBkPSJNMC4wNywtMEwwLjA3LC0wLjU0TDAuMTc2LC0wLjU0TDAuMTc2LC0wLjQwOUwwLjE2NCwtMC40MjVDMC4xNywtMC40NDQgMC4xNzksLTAuNDYgMC4xOSwtMC40NzVDMC4yMDIsLTAuNDkgMC4yMTUsLTAuNTAyIDAuMjMxLC0wLjUxMkMwLjI0NCwtMC41MjEgMC4yNTgsLTAuNTI4IDAuMjc1LC0wLjUzM0MwLjI5MSwtMC41MzggMC4zMDcsLTAuNTQxIDAuMzI0LC0wLjU0MkMwLjM0MSwtMC41NDMgMC4zNTgsLTAuNTQzIDAuMzc0LC0wLjU0TDAuMzc0LC0wLjQyN0MwLjM1OCwtMC40MzIgMC4zMzksLTAuNDM0IDAuMzE5LC0wLjQzMkMwLjI5OCwtMC40MyAwLjI3OSwtMC40MjQgMC4yNjIsLTAuNDE1QzAuMjQ2LC0wLjQwNiAwLjIzMiwtMC4zOTQgMC4yMjIsLTAuMzhDMC4yMTEsLTAuMzY2IDAuMjA0LC0wLjM1IDAuMTk5LC0wLjMzMkMwLjE5NCwtMC4zMTUgMC4xOTEsLTAuMjk1IDAuMTkxLC0wLjI3NEwwLjE5MSwtMEwwLjA3LC0wWiIgZmlsbD0iIzFjNzViYyIvPjwvZz48ZyB0cmFuc2Zvcm09Im1hdHJpeCgyMDAgMCAwIDIwMCAxMjg0Ljg3NDE5NSAxMTI4LjQxMzMyMSkiPjxwYXRoIGQ9Ik0wLjM4NywtMEMwLjM1MSwwLjAwNyAwLjMxNiwwLjAxIDAuMjgyLDAuMDA5QzAuMjQ3LDAuMDA4IDAuMjE3LDAuMDAyIDAuMTksLTAuMDFDMC4xNjMsLTAuMDIyIDAuMTQzLC0wLjA0MSAwLjEyOSwtMC4wNjZDMC4xMTYsLTAuMDkgMC4xMSwtMC4xMTQgMC4xMDksLTAuMTM4QzAuMTA4LC0wLjE2MiAwLjEwOCwtMC4xOSAwLjEwOCwtMC4yMjFMMC4xMDgsLTAuNjlMMC4yMjgsLTAuNjlMMC4yMjgsLTAuMjI3QzAuMjI4LC0wLjIwNiAwLjIyOCwtMC4xODcgMC4yMjksLTAuMTcxQzAuMjI5LC0wLjE1NCAwLjIzMywtMC4xNDEgMC4yMzksLTAuMTNDMC4yNTEsLTAuMTExIDAuMjcsLTAuMDk5IDAuMjk3LC0wLjA5N0MwLjMyMywtMC4wOTUgMC4zNTMsLTAuMDk2IDAuMzg3LC0wLjEwMUwwLjM4NywtMFpNMC4wMSwtMC40NDZMMC4wMSwtMC41NEwwLjM4NywtMC41NEwwLjM4NywtMC40NDZMMC4wMSwtMC40NDZaIiBmaWxsPSIjMWM3NWJjIi8+PC9nPjxnIHRyYW5zZm9ybT0ibWF0cml4KDIwMCAwIDAgMjAwIDEzNzEuNDc0MTk1IDExMjguNDEzMzIxKSI+PHBhdGggZD0iTTAuMjIxLDAuMDE1QzAuMTgyLDAuMDE1IDAuMTQ5LDAuMDA4IDAuMTIyLC0wLjAwN0MwLjA5NSwtMC4wMjIgMC4wNzUsLTAuMDQyIDAuMDYxLC0wLjA2NkMwLjA0NywtMC4wOTEgMC4wNCwtMC4xMTggMC4wNCwtMC4xNDhDMC4wNCwtMC4xNzQgMC4wNDQsLTAuMTk4IDAuMDUzLC0wLjIxOEMwLjA2MiwtMC4yMzkgMC4wNzUsLTAuMjU3IDAuMDkzLC0wLjI3MkMwLjExMSwtMC4yODcgMC4xMzQsLTAuMyAwLjE2MywtMC4zMDlDMC4xODUsLTAuMzE3IDAuMjEsLTAuMzIzIDAuMjM5LC0wLjMyOUMwLjI2OCwtMC4zMzQgMC4zLC0wLjMzOSAwLjMzNCwtMC4zNDRDMC4zNjgsLTAuMzQ5IDAuNDA0LC0wLjM1NCAwLjQ0MiwtMC4zNkwwLjM5OCwtMC4zMzZDMC4zOTksLTAuMzczIDAuMzksLTAuNCAwLjM3MywtMC40MThDMC4zNTYsLTAuNDM2IDAuMzI4LC0wLjQ0NSAwLjI4NywtMC40NDVDMC4yNjMsLTAuNDQ1IDAuMjQsLTAuNDM5IDAuMjE3LC0wLjQyOEMwLjE5NCwtMC40MTYgMC4xNzksLTAuMzk3IDAuMTcsLTAuMzY5TDAuMDU5LC0wLjQwNEMwLjA3MywtMC40NDkgMC4wOTgsLTAuNDg2IDAuMTM2LC0wLjUxM0MwLjE3MywtMC41NDEgMC4yMjQsLTAuNTU1IDAuMjg4LC0wLjU1NUMwLjMzNiwtMC41NTUgMC4zNzgsLTAuNTQ3IDAuNDE0LC0wLjUzMkMwLjQ1MSwtMC41MTYgMC40NzgsLTAuNDkgMC40OTYsLTAuNDU1QzAuNTA1LC0wLjQzNiAwLjUxMSwtMC40MTYgMC41MTMsLTAuMzk2QzAuNTE1LC0wLjM3NyAwLjUxNiwtMC4zNTUgMC41MTYsLTAuMzMxTDAuNTE2LC0wTDAuNDExLC0wTDAuNDExLC0wLjExN0wwLjQyOCwtMC4wOThDMC40MDQsLTAuMDU5IDAuMzc1LC0wLjAzIDAuMzQzLC0wLjAxMkMwLjMxLDAuMDA2IDAuMjcsMC4wMTUgMC4yMjEsMC4wMTVaTTAuMjQ1LC0wLjA4MUMwLjI3MiwtMC4wODEgMC4yOTYsLTAuMDg2IDAuMzE1LC0wLjA5NkMwLjMzNCwtMC4xMDUgMC4zNSwtMC4xMTcgMC4zNjEsLTAuMTMxQzAuMzczLC0wLjE0NSAwLjM4LC0wLjE1OCAwLjM4NCwtMC4xNzFDMC4zOTEsLTAuMTg2IDAuMzk0LC0wLjIwNCAwLjM5NSwtMC4yMjNDMC4zOTYsLTAuMjQzIDAuMzk3LC0wLjI1OSAwLjM5NywtMC4yNzJMMC40MzQsLTAuMjYxQzAuMzk3LC0wLjI1NSAwLjM2NiwtMC4yNSAwLjM0LC0wLjI0NUMwLjMxNCwtMC4yNDEgMC4yOTEsLTAuMjM3IDAuMjczLC0wLjIzM0MwLjI1NCwtMC4yMyAwLjIzOCwtMC4yMjUgMC4yMjQsLTAuMjIxQzAuMjEsLTAuMjE1IDAuMTk4LC0wLjIxIDAuMTg4LC0wLjIwM0MwLjE3OSwtMC4xOTYgMC4xNzEsLTAuMTg5IDAuMTY2LC0wLjE4QzAuMTYxLC0wLjE3MSAwLjE1OCwtMC4xNjEgMC4xNTgsLTAuMTQ5QzAuMTU4LC0wLjEzNiAwLjE2MSwtMC4xMjUgMC4xNjgsLTAuMTE0QzAuMTc1LC0wLjEwNCAwLjE4NCwtMC4wOTYgMC4xOTcsLTAuMDlDMC4yMSwtMC4wODQgMC4yMjYsLTAuMDgxIDAuMjQ1LC0wLjA4MVoiIGZpbGw9IiMxYzc1YmMiLz48L2c+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMjAwIDAgMCAyMDAgMTQ4Ni42NzQxOTUgMTEyOC40MTMzMjEpIj48cmVjdCB4PSIwLjA4IiB5PSItMC43MzUiIHdpZHRoPSIwLjEyIiBoZWlnaHQ9IjAuNzM1IiBmaWxsPSIjMWM3NWJjIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU4Ni4yNTk5MDIgMCkiPjxnIHRyYW5zZm9ybT0ibWF0cml4KDIwMCAwIDAgMjAwIDk1NS40NzQxOTUgMTEyOC40MTMzMjEpIj48cGF0aCBkPSJNMC4wNywtMEwwLjA3LC0wLjcyTDAuNDksLTAuNzJMMC40OSwtMC42MzFMMC4xNTksLTAuNjMxTDAuMTU5LC0wLjQwNUwwLjQzLC0wLjQwNUwwLjQzLC0wLjMxNkwwLjE1OSwtMC4zMTZMMC4xNTksLTBMMC4wNywtMFoiIGZpbGw9IiMyMzkxZWIiLz48L2c+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMjAwIDAgMCAyMDAgMTA1My40NzQxOTUgMTEyOC40MTMzMjEpIj48cGF0aCBkPSJNMC4zMjUsLTAuNjIzTDAuMjUyLC0wLjYyM0wwLjMxOCwtMC43ODdMMC4zOSwtMC43ODdMMC4zMjUsLTAuNjIzWk0wLjIyNCwwLjAxNUMwLjE4MywwLjAxNSAwLjE0OSwwLjAwOCAwLjEyMiwtMC4wMDdDMC4wOTUsLTAuMDIyIDAuMDc0LC0wLjA0MSAwLjA2MSwtMC4wNjZDMC4wNDcsLTAuMDkgMC4wNCwtMC4xMTcgMC4wNCwtMC4xNDZDMC4wNCwtMC4xNzQgMC4wNDUsLTAuMTk5IDAuMDU2LC0wLjIyQzAuMDY3LC0wLjI0IDAuMDgyLC0wLjI1OCAwLjEwMiwtMC4yNzJDMC4xMjIsLTAuMjg2IDAuMTQ1LC0wLjI5NiAwLjE3MywtMC4zMDRDMC4xOTgsLTAuMzExIDAuMjI3LC0wLjMxNyAwLjI1OSwtMC4zMjNDMC4yOSwtMC4zMjggMC4zMjMsLTAuMzMzIDAuMzU1LC0wLjMzN0MwLjM4OCwtMC4zNDEgMC40MTksLTAuMzQ1IDAuNDQ3LC0wLjM1TDAuNDE1LC0wLjMzMUMwLjQxNiwtMC4zNzkgMC40MDYsLTAuNDE0IDAuMzg2LC0wLjQzN0MwLjM2NiwtMC40NiAwLjMzMSwtMC40NzIgMC4yODIsLTAuNDcyQzAuMjQ5LC0wLjQ3MiAwLjIyMSwtMC40NjUgMC4xOTYsLTAuNDVDMC4xNzIsLTAuNDM1IDAuMTU0LC0wLjQxMSAwLjE0NCwtMC4zNzhMMC4wNiwtMC40MDNDMC4wNzMsLTAuNDUgMC4wOTgsLTAuNDg3IDAuMTM1LC0wLjUxNEMwLjE3MywtMC41NDEgMC4yMjIsLTAuNTU1IDAuMjgzLC0wLjU1NUMwLjMzMiwtMC41NTUgMC4zNzQsLTAuNTQ2IDAuNDA5LC0wLjUyOUMwLjQ0NCwtMC41MTEgMC40NywtMC40ODUgMC40ODUsLTAuNDVDMC40OTMsLTAuNDMzIDAuNDk3LC0wLjQxNSAwLjQ5OSwtMC4zOTVDMC41MDIsLTAuMzc2IDAuNTAzLC0wLjM1NSAwLjUwMywtMC4zMzRMMC41MDMsLTBMMC40MjMsLTBMMC40MjMsLTAuMTNMMC40NDIsLTAuMTE4QzAuNDIyLC0wLjA3NCAwLjM5MywtMC4wNDEgMC4zNTcsLTAuMDE4QzAuMzIsMC4wMDQgMC4yNzYsMC4wMTUgMC4yMjQsMC4wMTVaTTAuMjM3LC0wLjA2QzAuMjY5LC0wLjA2IDAuMjk3LC0wLjA2NSAwLjMyLC0wLjA3N0MwLjM0NCwtMC4wODggMC4zNjMsLTAuMTAzIDAuMzc3LC0wLjEyMkMwLjM5MSwtMC4xNDEgMC40MDEsLTAuMTYyIDAuNDA1LC0wLjE4NEMwLjQxLC0wLjIwMSAwLjQxMywtMC4yMTkgMC40MTMsLTAuMjRDMC40MTQsLTAuMjYgMC40MTQsLTAuMjc2IDAuNDE0LC0wLjI4N0wwLjQ0NSwtMC4yNzRDMC40MTYsLTAuMjY5IDAuMzg3LC0wLjI2NSAwLjM1OSwtMC4yNjJDMC4zMzEsLTAuMjU4IDAuMzA1LC0wLjI1NCAwLjI4LC0wLjI1QzAuMjU1LC0wLjI0NiAwLjIzMiwtMC4yNDEgMC4yMTIsLTAuMjM2QzAuMTk4LC0wLjIzMSAwLjE4NCwtMC4yMjUgMC4xNzEsLTAuMjE3QzAuMTU4LC0wLjIxIDAuMTQ4LC0wLjIwMSAwLjE0LC0wLjE4OUMwLjEzMiwtMC4xNzcgMC4xMjksLTAuMTYzIDAuMTI5LC0wLjE0NkMwLjEyOSwtMC4xMzIgMC4xMzIsLTAuMTE4IDAuMTQsLTAuMTA0QzAuMTQ3LC0wLjA5MSAwLjE1OSwtMC4wOCAwLjE3NSwtMC4wNzJDMC4xOTEsLTAuMDY0IDAuMjExLC0wLjA2IDAuMjM3LC0wLjA2WiIgZmlsbD0iIzIzOTFlYiIvPjwvZz48ZyB0cmFuc2Zvcm09Im1hdHJpeCgyMDAgMCAwIDIwMCAxMTY1Ljk3NDE5NSAxMTI4LjQxMzMyMSkiPjxwYXRoIGQ9Ik0wLjI5NywwLjAxNUMwLjI0MywwLjAxNSAwLjE5NiwwLjAwMyAwLjE1OCwtMC4wMjJDMC4xMiwtMC4wNDYgMC4wOTEsLTAuMDggMC4wNzEsLTAuMTIzQzAuMDUxLC0wLjE2NiAwLjA0MSwtMC4yMTUgMC4wNCwtMC4yN0MwLjA0MSwtMC4zMjYgMC4wNTEsLTAuMzc2IDAuMDcyLC0wLjQxOEMwLjA5MiwtMC40NjEgMC4xMjEsLTAuNDk1IDAuMTYsLTAuNTE5QzAuMTk4LC0wLjU0MyAwLjI0NCwtMC41NTUgMC4yOTgsLTAuNTU1QzAuMzU1LC0wLjU1NSAwLjQwNCwtMC41NDEgMC40NDYsLTAuNTEzQzAuNDg3LC0wLjQ4NSAwLjUxNCwtMC40NDcgMC41MjgsLTAuMzk4TDAuNDQxLC0wLjM3MUMwLjQyOSwtMC40MDMgMC40MTEsLTAuNDI3IDAuMzg1LC0wLjQ0NUMwLjM1OSwtMC40NjIgMC4zMywtMC40NzEgMC4yOTcsLTAuNDcxQzAuMjYxLC0wLjQ3MSAwLjIzLC0wLjQ2MiAwLjIwNiwtMC40NDVDMC4xODIsLTAuNDI4IDAuMTY0LC0wLjQwNCAwLjE1MiwtMC4zNzRDMC4xNDEsLTAuMzQ0IDAuMTM1LC0wLjMwOSAwLjEzNSwtMC4yN0MwLjEzNSwtMC4yMSAwLjE0OSwtMC4xNjEgMC4xNzYsLTAuMTI1QzAuMjAzLC0wLjA4OCAwLjI0NCwtMC4wNyAwLjI5NywtMC4wN0MwLjMzMywtMC4wNyAwLjM2MiwtMC4wNzggMC4zODUsLTAuMDk0QzAuNDA5LC0wLjExIDAuNDI2LC0wLjEzMyAwLjQzOSwtMC4xNjRMMC41MjgsLTAuMTQxQzAuNTEsLTAuMDkgMC40OCwtMC4wNTIgMC40NDEsLTAuMDI1QzAuNDAxLDAuMDAyIDAuMzUzLDAuMDE1IDAuMjk3LDAuMDE1WiIgZmlsbD0iIzIzOTFlYiIvPjwvZz48ZyB0cmFuc2Zvcm09Im1hdHJpeCgyMDAgMCAwIDIwMCAxMjc1LjE3NDE5NSAxMTI4LjQxMzMyMSkiPjxwYXRoIGQ9Ik0wLjA4LC0wLjYzNkwwLjA4LC0wLjcyOEwwLjE2OSwtMC43MjhMMC4xNjksLTAuNjM2TDAuMDgsLTAuNjM2Wk0wLjA4LC0wTDAuMDgsLTAuNTRMMC4xNjksLTAuNTRMMC4xNjksLTBMMC4wOCwtMFoiIGZpbGw9IiMyMzkxZWIiLz48L2c+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMjAwIDAgMCAyMDAgMTMyNC45NzQxOTUgMTEyOC40MTMzMjEpIj48cmVjdCB4PSIwLjA4IiB5PSItMC43MzUiIHdpZHRoPSIwLjA4OSIgaGVpZ2h0PSIwLjczNSIgZmlsbD0iIzIzOTFlYiIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+" alt="Portal Fácil"></a>
+                </div>
+            </div>
+        </footer>
+
+        <a class="scroll-top" href="#header" aria-label="Voltar ao topo"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
+
+        <!-- ============ SCRIPTS (plataforma; nenhum JS autoral) ============ -->
+        <NextScript src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></NextScript>
+        <NextScript src="{BASE_PATH}/js/script.js" defer></NextScript>
+    </body>
+</html>
