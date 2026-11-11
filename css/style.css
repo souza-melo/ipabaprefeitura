@@ -650,7 +650,7 @@ button { font-family: inherit; }
 
 /* ---------- Banners (3 × 360×440) ---------- */
 .banners-trio { padding: 8px 0 56px; background: var(--superficie); }
-.banners-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 35px; }
+.banners-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 55px; }
 .banner-card { position: relative; display: block; width: 100%; max-width: 100%; height: 440px; border-radius: var(--r-lg); overflow: hidden; color: #fff; text-decoration: none; box-shadow: 0 8px 24px rgba(16,33,26,.12); transition: transform .25s ease, box-shadow .25s ease; }
 .banner-card:hover, .banner-card:focus-visible { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(16,33,26,.2); }
 .banner-card:focus-visible { outline: 3px solid var(--ambar-500); outline-offset: 3px; }
